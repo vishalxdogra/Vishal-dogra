@@ -421,6 +421,7 @@ type ProjectCardProps = {
   title: string;
   description: string;
   link: string;
+  demoLink?: string;
 };
 
 function ProjectCard({ title, description, link, demoLink }: ProjectCardProps) {
