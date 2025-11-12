@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import nodemailer from "nodemailer";
 
-const prisma = new PrismaClient();
+
 
 export async function POST(req: Request) {
   try {
@@ -15,7 +16,8 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
-
+    // 💤 Slight delay to ensure Supabase socket resolves properly (helps in some networks)
+    await new Promise((res) => setTimeout(res, 300));
     // 💾 Save message to Supabase (via Prisma)
     const newContact = await prisma.contact.create({
       data: { name, email, message },
