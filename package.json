@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "generate": "dotenv -e .env -- npx prisma generate",
+    "db:push": "dotenv -e .env -- npx prisma db push"
   },
   "dependencies": {
     "@prisma/client": "^6.19.0",
@@ -23,6 +25,7 @@
     "@types/nodemailer": "^7.0.3",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv-cli": "^11.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
     "prisma": "^6.19.0",
