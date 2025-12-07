@@ -17,9 +17,12 @@ const bodySans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Obsidian Elegance — Vishal Dogra",
+  title: "Vishal Dogra",
   description:
     "Portfolio of Vishal Dogra — Crafting quiet power through code. Dark, elegant, intentional.",
+  icons: {
+    icon: "/Vishal-dogra.jpeg",
+  },
 };
 
 export default function RootLayout({
