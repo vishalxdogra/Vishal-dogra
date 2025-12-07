@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "Portfolio of Vishal Dogra — Crafting quiet power through code. Dark, elegant, intentional.",
   icons: {
-    icon: "/Vishal-dogra.jpeg",
+    icon: "/favicon.ico",
   },
 };
 
