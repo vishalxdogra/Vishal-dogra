@@ -159,7 +159,7 @@ function Hero() {
   function FloatingResumeButton() {
   return (
     <a
-      href="/Vishal_Dogra_Resume.pdf"
+      href="/Vishal_resume_final.pdf"
       download
       className="fixed bottom-6 right-6 z-50 group flex items-center gap-2 px-5 py-3 rounded-full border border-[#BFA76F]/50 bg-[#0E0E0E]/80 backdrop-blur-md text-[#BFA76F] text-sm font-medium tracking-wider shadow-[0_0_15px_rgba(191,167,111,0.25)] hover:shadow-[0_0_25px_rgba(191,167,111,0.4)] hover:bg-[#BFA76F]/10 transition-all duration-300 floating-resume-animate"
     >
@@ -371,13 +371,22 @@ function Experience() {
       company: "National Institute of Technology, Srinagar",
       period: "July 2025 - October 2025",
       description:
-        "Contributed to the official web platform for Rang-e-Chinar, an inter-college cultural event. Implemented Cloudinary integration for efficient media management and optimized the event gallery for seamless uploads and real-time performance. Focused on responsive design and smooth animations for an elegant visual experience.",
+        "Contributed to the official web platform for Rang-e-Chinar, a college cultural event. Implemented Cloudinary integration for efficient media management and optimized the event gallery for seamless uploads and real-time performance. Focused on responsive design and smooth animations for an elegant visual experience.",
     },
-    
+    {
+      role: "Security Research Intern — Cyber Defense Lab",
+      company: "IIT Jammu",
+      period: "December 2025 - February 2026",
+      description:
+        "Designed and implemented AEGIS Scanner v2.0, a modular Python-based SQL injection detection tool supporting MySQL, PostgreSQL, MSSQL, and Oracle. Developed boolean-based, time-based, error-based, and UNION-based detection logic with automated payload generation, database-agnostic connector architecture, session-based authentication, CSRF protection, and structured vulnerability reporting.",
+    },
   ];
 
   return (
-    <section id="experience" className="py-28 bg-[#0B0B0B] text-[#E8E6E3]">
+    <section
+      id="experience"
+      className="py-28 bg-[#0B0B0B] text-[#E8E6E3]"
+    >
       <div className="max-w-5xl mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -399,12 +408,15 @@ function Experience() {
               className="border-l border-[#BFA76F]/30 pl-6 relative"
             >
               <span className="absolute -left-[7px] top-[8px] w-3 h-3 rounded-full bg-[#BFA76F]" />
+
               <h3 className="text-xl font-semibold text-[#BFA76F]">
                 {exp.role}
               </h3>
+
               <p className="text-sm text-zinc-500 mb-2">
                 {exp.company} • {exp.period}
               </p>
+
               <p className="text-[#E8E6E3]/80 leading-relaxed text-[0.95rem]">
                 {exp.description}
               </p>
@@ -494,6 +506,11 @@ function Projects() {
             description="Wanderlust — an Airbnb-style full-stack web app for exploring, hosting, and reviewing stays. Built with Node.js, Express, and MongoDB, it features secure authentication, map-based listings, image uploads via Cloudinary, and a clean, responsive UI."
             link="https://github.com/vishalxdogra/wanderlust"
             demoLink="https://wanderlust-za45.onrender.com/listings"
+          />
+          <ProjectCard
+            title="AEGIS Scanner v2.0 – SQL Injection Detection Tool"
+            description="A modular Python-based SQL injection scanner supporting MySQL, PostgreSQL, MSSQL, and Oracle, featuring multi-vector vulnerability detection, automated payload generation, plugin-based database connectors, and CSRF-protected authentication."
+            link="https://github.com/vishalxdogra/Aegis-Scanner"
           />
         </div>
       </div>
